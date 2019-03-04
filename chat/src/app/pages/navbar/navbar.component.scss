@@ -1,0 +1,12 @@
+span{
+    color:#ffffff;
+}
+a{
+    cursor:pointer;
+    color:#eaeaea;
+    margin-left:3am;
+    &.active{
+        border-bottom:3px solid gold;
+    }
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <!--Navbar tag-->
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+      <!--Bootstrap container-->
+      <div class="container">
+        <span class="navbar-brand">ChatApp</span>
+          <div class="page-links">
+            <!--CurrentUser has to be true to show the childs of ul else show the template loggedOut-->
+            <ul class="navbar-nav" *ngIf="currentUser else loggedOut">
+              <li class="nav-item">
+                <!--Nav link to acces to the chatrooms-->
+                <a routerLink="/chat" routerLinkActive="active" class="nav-link">Chat Rooms</a>
+              </li>
+              <li class="nav-item">
+                <!--Navbar link to logout-->
+                <a class="nav-link" (click)="auth.logout()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--Just in case that the currentUser is false shows this-->
+    <ng-template #loggedOut>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <!--Link to login page-->
+          <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <!--Link to sign-up page-->
+          <a routerLink="/sign-up" routerLinkActive="active" class="nav-link">Sign Up</a>
+        </li>
+      </ul>
+    </ng-template>   
+  </body>
+ </html>

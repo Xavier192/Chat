@@ -1,0 +1,13 @@
+<div class="h-100 d-flex flex-column chatroom-list">
+  <!--chatroomService variable of .ts and ".chatrooms"
+     references the firebase collection name-->
+  <ng-container *ngFor="let chatroom of chatroomService.chatrooms | async">
+    <div class="chatroom-list-item">
+      <!--References to the chatroom on firebase, it gets the name-->
+      <a [routerLink]="['/chat', chatroom.id]">{{chatroom.name}}</a>
+    </div>
+    <div class="chatroom-list-item">
+      <a [routerLink]="['/chat', chatroom.id]">{{chatroom.name2}}</a>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,33 @@
+<app-navbar></app-navbar><!--Calling navbar component first-->
+<div class="container-wrapper container d-flex justify-content-center align-items-center">
+  <div class="form-wrapper text-center">
+    <h2 class="text-center">Sign Up</h2>
+    <!--On pressing submit button execute sign-up.ts submit() method-->
+    <form [formGroup]="signupForm" (submit)="submit()" novalidate>
+      <div class="name-wrapper d-flex">
+        <!--Every form group is the container of every input text field-->
+        <div class="form-group first-name">
+          <!--First name text field of the form-->
+          <input type="text" class="form-control" id="first-name-input" placeholder="First Name" formControlName="firstName">
+        </div>
+        <div class="form-group last-name">
+          <!--Last name text field of the form-->
+          <input type="text" class="form-control" id="last-name-input" placeholder="Last Name" formControlName="lastName">
+        </div>
+      </div>
+      <div class="form-group">
+        <!--Email text field-->
+        <input type="email" class="form-control" id="email-input" placeholder="Enter Email" formControlName="email">
+      </div>
+      <div class="form-group">
+         <!--Password text field-->
+        <input type="password" class="form-control" id="password-input" placeholder="Password" formControlName="password">
+      </div>
+      <!--Submit button of the form-->
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+    <!--Link to login page, just in case that you click on 'Already have an account?'-->
+    <small><a routerLink="/login">Already have an Account?</a></small>
+  </div>
+ </div>
+ 

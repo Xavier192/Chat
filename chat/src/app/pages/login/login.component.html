@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container-wrapper container d-flex 
+justify-content-center align-items-center">
+    <div class="form-wrapper text-center">
+      <h2 class="text-center">Login</h2>
+      <!--Formulary to do login onsubmit execute .ts submit() method-->
+      <form [formGroup]="loginForm" (submit)="submit()" novalidate>
+        <div class="form-group">
+          <!--text field to type your email inside-->
+          <input type="email" class="form-control" id="email-input" 
+          placeholder="Enter Email" formControlName="email">
+        </div>
+        <div class="form-group">
+          <!--text field to type the password inside-->
+          <input type="password" class="form-control" id="password-input"
+          placeholder="Password" formControlName="password">
+        </div>
+        <!--Button to submit the formulary-->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <!--Link to acces to the component "sign-up"-->
+      <small><a routerLink="/sign-up">Need an Account?</a></small>
+    </div>
+   </div>
+
+  

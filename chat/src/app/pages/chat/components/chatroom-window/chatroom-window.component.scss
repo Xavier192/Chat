@@ -1,0 +1,10 @@
+.chat-window {
+    border-right: 2px solid grey;
+    //Vertical scroll
+    overflow-y: scroll;
+    .message-wrapper {
+        //Border bottom in each title
+        border-bottom: 1px solid grey;
+        padding: 1em;
+    }
+} 
